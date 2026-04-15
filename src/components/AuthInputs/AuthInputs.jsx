@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './AuthInputs.css';
+import * as Controls from  '../StyledComponents/Controls';
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -23,26 +24,26 @@ export default function AuthInputs() {
 
   return (
     <div id="auth-inputs">
-      <div className="controls">
+      <Controls.Container>
         <p className="paragraph">
-          <label className={`label ${emailNotValid ? 'invalid' : ''}`}>Email</label>
-          <input
+          <Controls.Label $invalid={emailNotValid}>Email</Controls.Label>
+          <Controls.Input
             type="email"
-            className={emailNotValid ? 'invalid' : undefined}
             onChange={(event) => handleInputChange('email', event.target.value)}
+            $invalid={emailNotValid}
           />
         </p>
         <p className="paragraph">
-          <label className={`label ${passwordNotValid ? 'invalid' : ''}`}>Password</label>
-          <input
+          <Controls.Label $invalid={passwordNotValid}>Password</Controls.Label>
+          <Controls.Input
             type="password"
-            className={passwordNotValid ? 'invalid' : undefined}
             onChange={(event) =>
               handleInputChange('password', event.target.value)
             }
+            $invalid={passwordNotValid}
           />
         </p>
-      </div>
+      </Controls.Container>
       <div className="actions">
         <button type="button" className="text-button">
           Create a new account
