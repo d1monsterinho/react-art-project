@@ -36,10 +36,6 @@ button:focus {
   border: none;
 }
 
-.button:hover {
-  background-color: #f0920e;
-}
-
 .text-button {
   color: #f0b322;
   border: none;

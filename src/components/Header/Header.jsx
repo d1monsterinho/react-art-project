@@ -1,12 +1,12 @@
 import logo from '../../assets/logo.png';
-import classes from './Header.module.css';
+import { Header as StyledHeader} from '../StyledComponents/Header';
 
 export default function Header() {
   return (
-    <header>
+    <StyledHeader>
       <img src={logo} alt="A canvas" />
       <h1>ReactArt</h1>
-      <p className={classes.paragraph}>A community of artists and art-lovers.</p>
-    </header>
+      <p>A community of artists and art-lovers.</p>
+    </StyledHeader>
   );
 }
