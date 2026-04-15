@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './AuthInputs.css';
 import * as Controls from  '../StyledComponents/Controls';
+import * as Actions from '../StyledComponents/Actions';
 
 export default function AuthInputs() {
   const [enteredEmail, setEnteredEmail] = useState('');
@@ -44,12 +45,12 @@ export default function AuthInputs() {
           />
         </p>
       </Controls.Container>
-      <div className="actions">
+      <Actions.Container>
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <button className='button' onClick={handleLogin}>Sign In</button>
-      </div>
+        <Actions.Button onClick={handleLogin}>Sign In</Actions.Button>
+      </Actions.Container>
     </div>
   );
 }

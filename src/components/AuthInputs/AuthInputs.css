@@ -8,9 +8,3 @@
   background: linear-gradient(180deg, #474232 0%, #28271c 100%);
   color: white;
 }
-
-.actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
